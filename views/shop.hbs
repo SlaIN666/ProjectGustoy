@@ -1,0 +1,955 @@
+<div class="preloader" id="preloader">
+
+    <div class="brand">
+        <div class="pre-logo">
+            <svg width="200px" height="200px" >
+                <path stroke="#EA73FF" stroke-width="0" fill="#ff004e" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                S144.229,62.683,140.773,59.227z"/>
+            
+                <path stroke="#FFF" stroke-width="0" fill="#ff004e" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                S144.229,62.683,140.773,59.227z"/>
+            
+                <path stroke="#EA73FF" stroke-width="0" fill="#ff004e" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                S144.229,62.683,140.773,59.227z"/>
+            </svg>
+        </div>
+    </div>
+
+</div>
+
+<div class="cursor"></div>
+
+<div class="cursor-inner"></div>
+
+<div class="page-wrapper-shop">
+
+    <header>
+
+        <div class="logo logo-shop" role="banner">
+
+            <a href="/"><img src="LOGO.svg" alt="logo" class="img-logo"></a>
+
+        </div>
+
+        <div class="shop-nav">
+            
+            <form onsubmit="return false;">
+
+                <input type="text" name="search" placeholder=" . . . " class="search-form" id="searchbar">
+
+                <button type="button" class="search-button" onclick="searchEngine()"></button>
+
+            </form>
+
+        </div>
+
+        <div class="menu menu-shop">
+
+            <input type="checkbox">
+
+            <a href="#" class="menu-button"><span></span></a>
+
+            <nav class="nav" role="navigation">
+
+                <ul class="classfordef">
+
+                    <li><a href="/" class="menu-item" >Главная</a></li>
+                    <li><a href="/shop" class="menu-item">Магазин</a></li>
+                    <li><a href="/news" class="menu-item">Новости</a></li>
+                    <li><a href="/about" class="menu-item">О нас</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="shop-main" role="main">
+
+        <div class="category-nav-wrapper">
+            
+            <nav class="category-nav">
+
+                <ul class="topmenu">
+
+                    <li><a class="categoty-button" href="#">устройства</a>
+
+                        <ul class="submenu">
+
+                            <li><a class="subCategoryButtons" href="#pods">POD-системы</a></li>
+                            <li><a class="subCategoryButtons" href="#mods">платы</a></li>
+                            <li><a class="subCategoryButtons" href="#mechs">мех-моды</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <li><a class="categoty-button" href="#">жидкости</a>
+
+                        <ul class="submenu">
+
+                            <li><a class="subCategoryButtons" href="#prem">Америка</a></li>
+                            <li><a class="subCategoryButtons" href="#shirp">Россия</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <li><a class="categoty-button" href="#">атомайзеры</a>
+
+                        <ul class="submenu">
+
+                            <li><a class="subCategoryButtons" href="#rda">дрипки</a></li>
+                            <li><a class="subCategoryButtons" href="#tank">баки</a></li>
+                            <li><a class="subCategoryButtons" href="#rdta">rdta</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <li><a class="categoty-button" href="#">расходники</a>
+
+                        <ul class="submenu">
+
+                            <li><a class="subCategoryButtons" href="#coil">койлы</a></li>
+                            <li><a class="subCategoryButtons" href="#cotton">вата</a></li>
+                            <li><a class="subCategoryButtons" href="#accum">аккумуляторы</a></li>
+                            <li><a class="subCategoryButtons" href="#atom">испарители</a></li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+        <section class="shop-items-grid">
+
+            <h2>устройства</h2>
+
+            <div class="cat-wrapper">
+
+                <h3 id="pods">POD-системы</h3>
+
+                <div class="content-grid">
+
+                    {{#each dataPodsArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+            <div class="cat-wrapper">
+
+                <h3 id="mods">платы</h3>
+
+                <div class="content-grid">
+                    
+                    {{#each dataModsArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+            <div class="cat-wrapper">
+
+                <h3 id="mechs">мех-моды</h3>
+
+                <div class="content-grid">
+                    
+                    {{#each dataMechArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="shop-items-grid">
+            
+            <h2>жидкости</h2>
+
+            <div class="cat-wrapper">
+
+                <h3 id="prem">Америка</h3>
+
+                <div class="content-grid">
+                        
+                    {{#each dataAmerikaArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+            <div class="cat-wrapper">
+
+                <h3 id="shirp">Россия</h3>
+
+                <div class="content-grid">
+                        
+                    {{#each dataRusArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="shop-items-grid">
+            
+            <h2>атомайзеры</h2>
+
+            <div class="cat-wrapper">
+
+                <h3 id="rda">дрипки</h3>
+
+                <div class="content-grid">
+                        
+                    {{#each dataDripkaArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+            <div class="cat-wrapper">
+
+                <h3 id="tank">баки</h3>
+
+                <div class="content-grid">
+                        
+                    {{#each dataBakArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+            <div class="cat-wrapper">
+
+                <h3 id="rdta">rdta</h3>
+
+                <div class="content-grid">
+                        
+                    {{#each dataRdtaArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="shop-items-grid">
+            
+            <h2>расходники</h2>
+
+            <div class="cat-wrapper">
+
+                <h3 id="coil">койлы</h3>
+
+                <div class="content-grid">
+                        
+                    {{#each dataDripkaArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+            <div class="cat-wrapper">
+
+                <h3 id="cotton">вата</h3>
+
+                <div class="content-grid">
+                        
+                    {{#each dataBakArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+            <div class="cat-wrapper">
+
+                <h3 id="accum">аккумуляторы</h3>
+
+                <div class="content-grid">
+                        
+                    {{#each dataRdtaArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+            <div class="cat-wrapper">
+
+                <h3 id="atom">испарители</h3>
+
+                <div class="content-grid">
+                        
+                    {{#each dataRdtaArray}}
+
+                        <div class="shop-items">
+                            
+                            <div class="product-item">
+
+                                <img src="{{this.[2]}}" alt="shopitem">
+
+                                <div class="product-list">
+
+                                    <h3>{{this.[0]}}</h3>
+
+                                    <span class="price">₽ {{this.[1]}}</span>
+
+                                    <span class="quantity">{{this.[3]}}</span>
+
+                                    <button class="add-to-cart-button">В корзину</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+        </section>		
+
+        <a class="prev" onclick="carousel(-1)">&#10094</a>
+
+        <a class="next" onclick="carousel(1)">&#10095</a>
+
+        <div class="cart-icon">
+
+            <a href="#shopping-cart"><img src="CART.svg" alt="cart"></a>
+
+        </div>
+
+        <div class="chat-icon">
+
+            <a href="#chat"><img src="CHAT.svg" alt="chat"></a>
+
+            <iframe
+                id="chatbot"
+                allow="microphone;"
+                width="350"
+                height="430"
+                src="https://console.dialogflow.com/api-client/demo/embedded/a1b72230-9648-4cb3-befc-458601556369">
+            </iframe>
+
+        </div>
+
+        <div class="shop-cart" id="shopping-cart">
+                
+            <h2 class="title">Корзина</h2>
+
+            <div class="shop-cart-items-wrapper">
+
+            </div>
+
+            <div class="order-button">
+                    
+                <a href="#orderForm"><button class="order btn" name="order-button" type="button"><h3 class="text">заказать</h3></button></a>
+
+            </div>
+
+            <div class="total-count">
+                    
+                <span class="cart-total-price">₽ 0</span>
+
+            </div>
+
+        </div>
+
+        <div class="order-form-wrapper" id="orderForm">
+            
+            <form class="order-form" id="formOrder">
+
+                <h2 class="title">Форма заказа</h2>					
+
+                <label for="name">ваше имя</label>
+                <input type="text" name="name" required="true" placeholder="Иван Иванов" id="nameForm">					
+                    
+                <label for="phone">ваш номер телефона</label>
+                <input id="phoneInput" type="tel" name="phone" required="true" placeholder="Что-бы связаться с вами">
+
+                <label for="comments">ваши пожелания</label>
+                <textarea name="comments" placeholder="Оставьте свой комментарий..." rows="3"></textarea>
+
+                <div class="buttons-wrapper">
+                    
+                    <button class="order btn" id="orderButton"><p class="text">заказать<p></button>
+
+                    <a><input type="reset" name="reset" value="&#x274C"></a>
+
+                </div>
+
+                <p class="politconf">
+
+                    нажимая кнопку заказать вы соглашаетесь с нашей 
+                    <a href="/agreement" class="anchor-hashtags">политикой конфиденциальности</a>
+
+                </p>
+
+
+            </form>
+
+        </div>
+
+        <div class="thanksWindowWrapper">
+
+            <div class="thanksWindow">
+
+                <p> cпасибо за ваш заказ!</p>
+
+            </div>
+
+        </div>
+
+        <div id="cloudsWrapper">
+
+        </div>
+
+    </main>
+    
+    <footer>
+
+        <nav role="navigation">
+
+            <ul class="navigation">
+
+                <li><a href="/" class="navigation-item">Главная</a></li>
+                <li><a href="/shop" class="navigation-item">Магазин</a></li>
+                <li><a href="/news" class="navigation-item">Новости</a></li>
+                <li><a href="/about" class="navigation-item">О нас</a></li>
+
+            </ul>
+
+        </nav>
+
+        <div class="information-footer">
+            
+            <h1>
+
+            GUSTOY | VAPE SHOP & LOUNGE | АЛЬМЕТЬЕВСК
+
+            </h1>
+
+            <h2>
+
+            Concept Vape Убежище в самом центре города. У нас вы можете найти все самое актуальное и эксклюзивное для парения.
+
+            </h2>
+
+            <div class="articleInformation" id="article1">
+
+                <p>
+
+                    Очень рады встречать вас в цифровом отделе нашего лаунжа!
+                    Наш список товаров Gustoy shop and Lounge вобрал в себя все самые современные данные о товаре, его наличии и его ценах.
+                    Здесь ты можешь узнать о наших акциях, распродажах и заказать что-то доставкой CDEK или Почтой России, или прийти и забрать самому на Гагарина 16. 
+
+                </p>
+
+                <p>
+
+                    В верхней части по середине ты можешь воспользоваться формой поиска по товарам или настройками сортировки,
+                    чтобы ты мог точно найти, нечто уникальное и под свои вкусы и предпочтения. Правее форм поиска ты можешь воспользоваться навигацией для перехода
+                    по страничкам нашего сайта. Ниже находится сетка представления товаров, тут ты можешь узнать информацию о товаре, его цену и наличие.
+                    В правом нижнем углу через форму ты можешь написать нашему консультанту и получить всю информацию, о интересующем тебя вопросе.
+                    В левом нижнем углу находится кружек с корзиной, нажав на который ты можешь в козину (ну надо-же).
+    				В нижней части страницы ты найдешь дублирующее навигационое меню ( если ты не с телефона ).
+
+                </p>
+
+                <p>
+
+                    Нужные данные о нашем вейп шопе, например наше местоположение, наш номер, нашу почту, ссылки на наши социальные сети, наше время работы ты
+                    можешь найти на страничке "О нас".
+
+                </p>
+
+                <p>
+
+                    Итак ты решил порадовать себя новым девайсом, но не хочешь что-бы он был большим и тяжелым в обслуге? Или тебе не нравится наваливать много пара, но ты
+                    хочешь, чтобы все это радовало тебе невероятным вкусом и давало в голову? Тогда под-системы твой выбор!                    
+
+                </p>
+
+                <p>
+
+                    Многие люди считают, что если ты паришь, то парить ты должен так, чтобы место где ты решил попарить было видно с космоса и метеослужбы присылали предупреждение 
+                    о возможных осадках! Но бывает такое, что тебе хочется просто насытить организм качественным никотином, а устраивать пати-хард из густого пара не хочется.
+                    Есть люди которые хотят просто бросить курить, но не хотят наваливать пара и именно для таких ситуация мы завозим POD-системы.
+
+                </p>
+
+                <p>
+
+                    Короче говоря POD-системы - это небольшие устройства в котором гармонично объединены аккумулятор, бак для жидкости и испаритель. 
+                    Главные плюсы под систем - это : Крохотные размеры и вес, его ты можешь носить с собой куда угодно и как угодно! Небольшое количество пара и жидкости 
+                    с солевым никотином, дают тебе возможность парить там где не позволит себе вейпер на плате или мехе, а солевой никотин даст тебе в голову за 3-6 затяжек!
+
+                </p>
+                
+                <p>
+
+                    Низкая цена. Большинство под-систем находятся в ценовом диапозоне от 1000 до 2000 рублей. А жидкости хватит на 15-20 заправок!
+                    В сумме это дает очень выгодное приобретение. И не стоит забывать, что данные девайсы очень легко обслуживать и заправлять, что так-же дает 
+                    преимущество к данному виду электронных сигарет.
+
+                </p>
+
+                <p>
+
+                    Самый большой плюс подов, как считают работники Gustoy shop and Lounge - это их большое разнообразие, как по дизайну, так и по способу передачи никотина.
+                    А еще они идеально подходят для новичков и желающих бросить курить в качестве первого девайса.
+
+                </p>
+
+                <p>
+
+                    Но что делать, если ты хочешь сохранить компактность и удобство пользования, но при этом есть силное желание учавствовать в соревнованиях типа "смотри сколько густого пара"? 
+                    Тогда специально для тебя мы собрали самые лучшие механические моды в одном месте. Мех-мод - один из самых крутых девайсов для парильщика. В эргономичном корпусе собрана мощь и 
+                    удобство, привлекательный вид и безопасность, эстетика и практичность. Современные механические моды включают в себя всего три компонента: корпус, аккумулятор и кнопка замыкания,
+                    что означает то, что поломать этого монстра будет очень трудной задачей. Естественно при адекватном использовании и обсуге! И большой плюс в копилку данных аппаратов идет за длительное время их 
+                    производства, что гарантирует отсутствие изъянов в конструкции и детских болезней девайсов.
+
+                </p>
+
+                <p>
+
+                    А как-же обстоит дело с теми, кому хочется иметь под рукой эдакий швейцарский нож и при этом полность контролировать его возможности, тогда имеет смысл взять для себя крутую плату в нашем магазине.
+                    Боксмоды дают их владельцам полный контроль над процессом парения. Ты можешь настроить мощность, температурный режим под твои койлы в общем только с платой ты можешь получить полность контролируемый 
+                    процесс получения удовольствия от густого и вкусного пара!
+
+                </p>
+
+            </div>
+
+            <div class="articleInformation" id="article2">
+
+                <p>
+                    
+                    Все устройства для парения обычно берутся надолго и один раз, а вот жидкости для парения (e-liquid), являются предметом вокруг которого творится какая-то магия! Вот ты вроде-бы купил себе вкусную жижку, 
+                    а вот ты уже начинаешь присматриваться к новой, поскольку парить уже почти ничего не осталось! Жидкости для электронных сигарет приходится покупать регулярно, но их разнообразие таково, что ты можешь часами
+                    выбирать себе жижку, потому-что они все классные и вкусные! Именно поэтому мы лично проверяем все жидкости и готовы рассказать и помочь тебе какую жижку из огромного количества выбрать.
+                    В густой мы завозим лучшие жидкости из Англии, России, Малайзии и США!
+
+                </p>
+
+                <p>
+
+                    И вот у тебя снова закончилась любимая жижка? И ты снова не знаешь какую выбрать? Тогда мы лично для тебя распишем какие жидкости есть в нашем каталоге. Начнем пожалуй с жижек которые прилетают с туманного альбиона. 
+
+                </p>
+
+                <p>
+
+                    Английские жидкости отличаются своей строгостью и чопорностью во вкусе, купив такую, ты будешь знать джентельменский кодекс как свои пять пальцев.Цена этих жижек может удивить, а скидки на них просто положить.
+
+                </p>
+
+                <p>
+
+                    Если же тебе хочется чего-то своего, чего-то родного, то твой выбор точно упадет на жидкости из России. А отдельная серия жижек с названием СССР затронет самые глубокие уголки твоей души и точно вызовет чувство ностальгии.
+
+                </p>
+
+                <p>
+
+                    Любишь дороговизну и стиль сочетающий в себе броскость и дерзкость, тогда Америка точно для тебя. Такие популярные жижки как BAD DRIP, не оставят тебя равнодушным к этому сегменту жидкостей для электронных сигарет. 
+
+                </p>
+
+                <p>
+
+                    Малазийкие жижи подарят тебе незабываемый вкус и густой пар, и оставят после себя желание переехать в теплые края и остаться там на всю жизнь!
+
+                </p>
+
+                <p>
+
+                    Если ты до сих пор не уверен что взять, то наши консультанты всегда рады помочь тебе с выбором, они расскажут тебе о всем и про все! Их ты можешь расспросить о всем, что тебя интересует, но нужно помнить, ведь ты не один и, если нужно подождать, то прояви терпение и тогда мир вейпинга порадует тебя еще больше!
+
+                </p>
+
+            </div>
+
+            <div class="articleInformation" id="article3">
+
+                <p>
+                     
+                    Когда ты берешь себе комплект на котором ты будешь парить густо и вкусно, то ты особо не заморачиваешься и быстро находишь то, что тебе нужно, но вот если ты выбираешь устройств сам, то тебе придется выбирать и атомайзер, а их разнообразие сопоставимо с разнообразием жидкостей, что невольно ставит тебя в тупик и ты задаешься вопросом, а что же взять? У нас ты можешь выбрать баки,
+                    дрипки или бако-дрипки, вобравшие в себя лучшие качества и от лучших производителей!
+
+                </p>
+
+                <p>
+
+                    Если ты хочешь вкусно и густо попарить и при этом не париться с заливкой каждые 5-10 затяжек, то RDTA (бако-дрипки) идеальный вариант для тебя, эти монстры вобрали в себя вместительность баков и вкусо-передачу от дрипок, что делает их почти идеальным дополнением к твоему девайсу. Но кого-то может отпугнуть их размеры и сложное обслуживание.
+
+                </p>
+
+                <p>
+
+                    Если запариваться по поводу обслуги и частых заливок тебе не хочется, тогда RTA (баки) будут верным спутником в твоем путешествии в мир вейпинга, особенно если ты новенький в нашей вселенной. Эти хитро-устроенные механизмы позволят тебе особо не заморачиваться о частых заправках и дадут тебе полностью насладиться вкусом твоей любимой жижки с густого. Естественно, как и со всеми вещами в нашей жизни они не идеальны,
+                    и имеют свои недостатки.
+
+                </p>
+
+                <p>
+
+                    Что-же до дрипок, то они точно не для новичков и сложны в обслуге, их ты должен заправлять довольно часто и следить за уровнем жидкости на вате. Тогда возникает логичный вопрос, а что же такого в этих чудовищах, если они имеют столько недостатков?
+                    Ответ прост и лаконичен - вкус. RDA (дрипка) будет выжимать из койлов максимум вкуса и пара, попробовав ее ты уже не сможешь получать удовольствие от других атомайзеров, но стоит ли идти на такие жертвы ради одного вкуса? На этот вопрос каждый должен ответить сам, но наши консультанты с радостью помогут тебе разобраться в этом разнообразии устройств!
+
+                </p>
+
+            </div>
+
+            <div class="articleInformation" id="article4">
+
+                <p>
+
+                    Расходные материалы и их замена самая важная часть в жизни любого вейпера. Правильное понимание когда и как нужно заменять, израсходовавшие ресурс материалы, залог вкусного и густого пара. 
+                    У нас ты можешь найти в каталоге самые качественные расходники для своих нужд. 
+                     
+                </p>
+
+                <p>
+
+                    Если тебе нужно поменять вату, койлы или почистить свои устройства, то ты можешь попросить обслужить их наших работников или спросить как правильно это сделать и наши сотрудники с радостью помогут вам!
+
+                </p>
+
+            </div>
+
+            <div class="column-wrapper">
+
+                <ul class="information-footer-ul">
+
+                    <li><p>- Широкий выбор товара и аксессуаров</p></li>
+                    <li><p>- Бонусы и подарки</p></li>
+                    <li><p>- Проф консультации</p></li>
+                    <li><p>- Lounge Zone</p></li>
+                    <li><p>- Стабильное обновление ассортимента</p></li>
+                    <li><p>- Всегда только новинки</p></li>
+                    <li><p>- Широкий выбор товара и аксессуаров</p></li>
+
+                </ul>
+
+                <div class="column-2">
+
+                    <h4>
+
+                        Действует доставка в другие города и регионы. Писать в лс группы.
+
+                    </h4>
+
+                    <p>
+
+                        ул. Гагарина 16, Альметьевск
+
+                    </p>
+
+                    <p>
+
+                        тел.: 8(939)390-19-94 <br>
+                        почта: gustoy.almet@gmail.com <br>
+                        Работаем ежедневно : 
+                        ПН-ВС с 10:00-20:00
+
+                    </p>
+
+                    <p>
+
+                        <a class="anchor-hashtags" href="https://vk.com/feed?q=%23gustoy_shop&section=search" target="_blank">#gustoy_shop</a>
+
+                        <a class="anchor-hashtags" href="https://vk.com/feed?q=%23gustoyshop_116&section=search" target="_blank">#gustoyshop_116</a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "gustoyproject",
+  "version": "1.0.0",
+  "description": "gustoy shop and lounge",
+  "main": "orderRes.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "googleapis": "^45.0.0",
+    "nodemailer": "^6.4.13"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "scripts": {
+    "start": "node server",
+    "build": "parcel build ./server.js --no-source-maps"
+  },
+  "author": "Nail Donskoy",
+  "license": "ISC"
+}
